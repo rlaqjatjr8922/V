@@ -1,0 +1,293 @@
+{% extends "base.html" %}
+{% set active = "record_file" %}
+
+{% block content %}
+
+<h1 class="page-title">영상 편집</h1>
+
+<p class="page-desc">
+    {{ map_name }}
+</p>
+
+<div class="video-box">
+    <video
+        id="videoPlayer"
+        controls
+        preload="metadata"
+        style="width:100%; border-radius:12px;"
+    >
+        <source
+            src="/record_edit/video/{{ video_name }}"
+            type="video/mp4"
+        >
+    </video>
+</div>
+
+<div class="mark-box">
+    <div class="mark-header">
+        <h2>마크 목록</h2>
+
+        <button
+            class="save-btn"
+            onclick="saveCurrentTime()"
+        >
+            현재 위치 저장
+        </button>
+    </div>
+
+    <div id="markList">
+
+        {% for mark in marks %}
+        <div class="mark-row">
+            <div class="mark-time">
+                {{ mark.time }}
+            </div>
+
+            <div class="mark-buttons">
+                <button
+                    onclick="jumpToTime('{{ mark.time }}')"
+                >
+                    이동
+                </button>
+
+                <button
+                    class="danger"
+                    onclick="deleteMark({{ loop.index0 }})"
+                >
+                    삭제
+                </button>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+
+<script>
+
+const MATCH_ID = "{{ match_id }}";
+
+function pad(n, size=2)
+{
+    return String(n).padStart(size, "0");
+}
+
+function formatTime(seconds)
+{
+    const h = Math.floor(seconds / 3600);
+
+    const m = Math.floor(
+        (seconds % 3600) / 60
+    );
+
+    const s = Math.floor(
+        seconds % 60
+    );
+
+    const ms = Math.floor(
+        (seconds - Math.floor(seconds)) * 1000
+    );
+
+    return (
+        pad(h)
+        + ":"
+        + pad(m)
+        + ":"
+        + pad(s)
+        + "."
+        + pad(ms, 3)
+    );
+}
+
+function parseTime(timeText)
+{
+    const parts = timeText.split(":");
+
+    const h = parseInt(parts[0]);
+    const m = parseInt(parts[1]);
+
+    const secParts = parts[2].split(".");
+
+    const s = parseInt(secParts[0]);
+
+    const ms = parseInt(secParts[1]);
+
+    return (
+        h * 3600
+        + m * 60
+        + s
+        + (ms / 1000)
+    );
+}
+
+function jumpToTime(timeText)
+{
+    const video =
+        document.getElementById(
+            "videoPlayer"
+        );
+
+    video.currentTime =
+        parseTime(timeText);
+
+    video.play();
+}
+
+async function saveCurrentTime()
+{
+    const video =
+        document.getElementById(
+            "videoPlayer"
+        );
+
+    const timeText =
+        formatTime(
+            video.currentTime
+        );
+
+    const formData =
+        new FormData();
+
+    formData.append(
+        "match_id",
+        MATCH_ID
+    );
+
+    formData.append(
+        "time",
+        timeText
+    );
+
+    await fetch(
+        "/record_edit/add_mark",
+        {
+            method: "POST",
+            body: formData
+        }
+    );
+
+    location.reload();
+}
+
+async function deleteMark(index)
+{
+    if (
+        !confirm(
+            "마크를 삭제할까요?"
+        )
+    )
+    {
+        return;
+    }
+
+    const formData =
+        new FormData();
+
+    formData.append(
+        "match_id",
+        MATCH_ID
+    );
+
+    formData.append(
+        "index",
+        index
+    );
+
+    await fetch(
+        "/record_edit/delete_mark",
+        {
+            method: "POST",
+            body: formData
+        }
+    );
+
+    location.reload();
+}
+
+</script>
+
+<style>
+
+.page-title{
+    font-size:36px;
+    margin:0 0 10px;
+}
+
+.page-desc{
+    color:#aaa;
+    margin-bottom:24px;
+}
+
+.video-box{
+    background:#081018;
+    border:1px solid #1c2a36;
+    border-radius:14px;
+    padding:16px;
+    margin-bottom:20px;
+}
+
+.mark-box{
+    background:#081018;
+    border:1px solid #1c2a36;
+    border-radius:14px;
+    padding:16px;
+}
+
+.mark-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:16px;
+}
+
+.mark-header h2{
+    margin:0;
+}
+
+.save-btn{
+    background:#132333;
+    color:white;
+    border:1px solid #2e455a;
+    border-radius:8px;
+    padding:10px 14px;
+    cursor:pointer;
+}
+
+.mark-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px;
+    border-top:1px solid #1c2a36;
+}
+
+.mark-row:first-child{
+    border-top:none;
+}
+
+.mark-time{
+    color:white;
+    font-weight:bold;
+}
+
+.mark-buttons{
+    display:flex;
+    gap:8px;
+}
+
+.mark-buttons button{
+    background:#132333;
+    color:white;
+    border:1px solid #2e455a;
+    border-radius:8px;
+    padding:8px 12px;
+    cursor:pointer;
+}
+
+.mark-buttons .danger{
+    color:#ff5c5c;
+}
+
+</style>
+
+{% endblock %}

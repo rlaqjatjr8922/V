@@ -1,0 +1,9 @@
+data/raw/
+data/memory/
+data/models/
+AssetRipper_win_x64/
+*.h5
+*.pt
+*.exe
+__pycache__/
+*.pyc

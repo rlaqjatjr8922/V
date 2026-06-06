@@ -1,0 +1,228 @@
+{% extends "base.html" %}
+{% set active = "history" %}
+
+{% block content %}
+
+<h1 style="font-size:36px; margin-bottom:10px;">
+    전적 기록
+</h1>
+
+<p style="color:#aaa; margin-bottom:20px;">
+    최근 매치 기록
+</p>
+
+<div class="search-box">
+    <input
+        id="searchInput"
+        type="text"
+        placeholder="전적 검색"
+        oninput="searchRows()"
+    >
+</div>
+
+<div class="match-list" id="matchList">
+
+    {% for row in rows %}
+    <div
+        class="match-card"
+        data-name="{{ row.map }} {{ row.game_mode }} {{ row.date }} {{ row.game_duration }} {{ row.blue_score }} {{ row.red_score }}"
+        onclick="location.href='/match_detail/{{ row.match_id }}'"
+    >
+
+        <div class="match-info">
+            <span class="map-text">{{ row.map }}</span>
+
+            <span class="sep">|</span>
+
+            <span>{{ row.game_mode }}</span>
+
+            <span class="sep">|</span>
+
+            <span>{{ row.date }}</span>
+
+            <span class="sep">|</span>
+
+            <span>{{ row.game_duration }}</span>
+
+            <span class="sep">|</span>
+
+            <span class="score-text">
+                {{ row.blue_score }} : {{ row.red_score }}
+            </span>
+        </div>
+
+    </div>
+    {% endfor %}
+
+</div>
+
+<div class="page-box">
+    <button onclick="prevPage()">이전</button>
+    <span id="pageInfo">1 / 1</span>
+    <button onclick="nextPage()">다음</button>
+</div>
+
+<style>
+.search-box {
+    margin-bottom:16px;
+}
+
+.search-box input {
+    width:100%;
+    box-sizing:border-box;
+    padding:14px;
+    background:#060b10;
+    color:white;
+    border:1px solid #1c2a36;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.match-list{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.match-card{
+    background:#07111a;
+    border:1px solid #1c2a36;
+    border-radius:8px;
+    padding:14px 16px;
+    cursor:pointer;
+    transition:.15s;
+}
+
+.match-card:hover{
+    background:#0b1722;
+    border-color:#2f6cff;
+}
+
+.match-info{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px;
+    color:#ccc;
+    font-size:17px;
+}
+
+.map-text{
+    color:white;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.sep{
+    color:#385064;
+}
+
+.score-text{
+    color:white;
+    font-weight:bold;
+}
+
+.page-box {
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:14px;
+}
+
+.page-box button {
+    background:#111a24;
+    color:white;
+    border:1px solid #1c2a36;
+    border-radius:7px;
+    padding:10px 18px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.page-box button:hover {
+    background:#1f2937;
+}
+
+#pageInfo {
+    color:#ccc;
+    font-size:16px;
+}
+</style>
+
+<script>
+let currentPage = 1;
+const pageSize = 15;
+let filteredRows = [];
+
+function getRows() {
+    return Array.from(document.querySelectorAll(".match-card"));
+}
+
+function searchRows() {
+    const keyword = document.getElementById("searchInput").value.toLowerCase();
+
+    filteredRows = getRows().filter(row => {
+        const name = row.dataset.name.toLowerCase();
+        return name.includes(keyword);
+    });
+
+    currentPage = 1;
+    renderPage();
+}
+
+function renderPage() {
+    const rows = getRows();
+
+    rows.forEach(row => {
+        row.style.display = "none";
+    });
+
+    const totalPages = Math.max(
+        1,
+        Math.ceil(filteredRows.length / pageSize)
+    );
+
+    if (currentPage > totalPages) {
+        currentPage = totalPages;
+    }
+
+    const start = (currentPage - 1) * pageSize;
+    const end = start + pageSize;
+
+    filteredRows
+        .slice(start, end)
+        .forEach(row => {
+            row.style.display = "block";
+        });
+
+    document.getElementById("pageInfo").innerText =
+        currentPage + " / " + totalPages;
+}
+
+function prevPage() {
+    if (currentPage > 1) {
+        currentPage--;
+        renderPage();
+    }
+}
+
+function nextPage() {
+    const totalPages = Math.max(
+        1,
+        Math.ceil(filteredRows.length / pageSize)
+    );
+
+    if (currentPage < totalPages) {
+        currentPage++;
+        renderPage();
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    filteredRows = getRows();
+    renderPage();
+});
+</script>
+
+{% endblock %}

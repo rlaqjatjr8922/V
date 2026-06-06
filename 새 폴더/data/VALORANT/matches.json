@@ -1,0 +1,182 @@
+{
+    "0fb0f9ef-b5dd-45cc-b4a4-584b7132a9ef": {
+        "map": "난투 D",
+        "game_mode": "초월 난투 1대1",
+        "date": "2026-06-03 20:38:42",
+        "game_duration": "00:05:16.266",
+        "blue_score": 10,
+        "red_score": 3,
+        "win": "Blue",
+        "players": [
+            "5780adfe-60d8-5210-a141-c6e158721789",
+            "cc03dbe1-f374-5655-ab7b-35f3bfcc787a"
+        ]
+    },
+    "1d648e36-6bfd-4179-ac84-4e23f5e7fa70": {
+        "map": "프랙처",
+        "game_mode": "경쟁전",
+        "date": "2026-06-03 21:15:28",
+        "game_duration": "00:35:22.333",
+        "blue_score": 9,
+        "red_score": 13,
+        "win": "Red",
+        "players": [
+            "5780adfe-60d8-5210-a141-c6e158721789",
+            "c4908da4-76fa-53f6-9169-af439c38216f",
+            "14f81a72-c98c-58da-bfb4-e9988aba7786",
+            "3986e3ad-b6aa-59de-8e21-c74c98d25bfa",
+            "2cfa2ae0-69b9-5086-a860-f8c47dd0a024",
+            "3c0f0707-4a33-5765-a42d-7f199a390edc",
+            "53c4200b-6cca-5511-98e1-fd23fd2ab2d3",
+            "bc845574-977f-5e63-b7f4-21fbd70680b7",
+            "6a42487e-47e2-5ff8-b1fb-40e2b3447b70",
+            "001322d1-05cd-5625-abb1-150a1c2240d2"
+        ]
+    },
+    "d190d375-d544-45df-8fba-a6b306d1d0fe": {
+        "map": "난투 A",
+        "game_mode": "초월 난투 1대1",
+        "date": "2026-06-04 17:46:19",
+        "game_duration": "00:04:50.533",
+        "blue_score": 3,
+        "red_score": 10,
+        "win": "Red",
+        "players": [
+            "e336899b-9690-54df-a4dd-54d0ace36ca1",
+            "5780adfe-60d8-5210-a141-c6e158721789"
+        ]
+    },
+    "03c88063-2c58-4b37-ab56-2272d1c03ada": {
+        "map": "헤이븐",
+        "game_mode": "경쟁전",
+        "date": "2026-06-04 18:28:45",
+        "game_duration": "00:34:52.666",
+        "blue_score": 9,
+        "red_score": 13,
+        "win": "Red",
+        "players": [
+            "f00c1125-e19f-5b56-b5e6-a0b0569f9238",
+            "1ba8ada1-c5d3-52d8-bcb7-466a4f2a095f",
+            "3afffb55-9510-592b-8da9-bce004c16a32",
+            "02d28a5d-38ab-583a-8c0a-8fe738bd28e0",
+            "51742a5b-7ba1-5f0a-941f-55c860a3eae5",
+            "237f8119-b1f8-5f8c-b9f6-171ed3f92c44",
+            "d1477a66-16bf-52ae-aac1-5d8b2084068d",
+            "5ce7b9b7-9bec-594e-8b00-466bfdd07003",
+            "c59e715c-5c1b-52bc-ac97-14a7f75de401",
+            "5780adfe-60d8-5210-a141-c6e158721789"
+        ]
+    },
+    "3fbe9acf-e831-47ca-a3a8-d150ee67e369": {
+        "map": "로터스",
+        "game_mode": "경쟁전",
+        "date": "2026-06-04 18:54:30",
+        "game_duration": "00:33:34.299",
+        "blue_score": 8,
+        "red_score": 13,
+        "win": "Red",
+        "players": [
+            "13c5fdb2-ab86-507e-9eab-446727ce4047",
+            "974578a8-3299-5681-9b73-38ecb7363db5",
+            "7424da4d-3531-51b8-a622-30191a3dc49c",
+            "8c1af65f-8adf-5130-a7a5-10f069de2199",
+            "6180fcb2-1b28-5850-84f8-1d00d733a0c2",
+            "64bb2b2d-f586-5568-934d-51dad1b9ce11",
+            "5780adfe-60d8-5210-a141-c6e158721789",
+            "747cf4fb-8f70-5e37-b7de-7162dbe5ab8b",
+            "7b4a0473-8b9b-51a3-9deb-55b9d6328a3b",
+            "a54b0bb6-3b72-5a8e-8dda-a50d19911fb9"
+        ]
+    },
+    "86391908-d1c6-438e-95fe-d77e1f7ad4e0": {
+        "map": "펄",
+        "game_mode": "경쟁전",
+        "date": "2026-06-04 20:14:55",
+        "game_duration": "00:38:16.466",
+        "blue_score": 13,
+        "red_score": 11,
+        "win": "Blue",
+        "players": [
+            "57663a41-8859-5b45-967f-9b22d1635c56",
+            "a59158a3-f999-589c-91db-f591b359df0e",
+            "a82a9478-4f97-52de-8d8c-f758db3c9302",
+            "cfa292eb-fea2-56ca-ba61-50f124702c68",
+            "8f2a9d01-9177-53b1-b600-a955715dd604",
+            "242b26c4-b442-509a-a1dd-47168a32da9d",
+            "5780adfe-60d8-5210-a141-c6e158721789",
+            "da780a63-6a23-5d90-95b7-1d73132c9894",
+            "7b97bf8a-354d-55e9-bdbe-4de7595b8c07",
+            "4da07063-d644-5741-8108-432d98335a67"
+        ]
+    },
+    "e8b8580c-7412-4847-97f0-1f3e8db0d9d1": {
+        "map": "어센트",
+        "game_mode": "경쟁전",
+        "date": "2026-06-04 20:58:05",
+        "game_duration": "00:40:53.599",
+        "blue_score": 10,
+        "red_score": 13,
+        "win": "Red",
+        "players": [
+            "dbab0a0c-a323-598b-871c-cc9ffa5e11a2",
+            "824f3ed5-b5ce-595f-807b-bcbc9b789dc2",
+            "a4e712b7-0862-58cc-aec2-9bf4b9345aa9",
+            "ef3b563b-84af-5123-9385-89186afc9442",
+            "c6f595ab-640b-58fb-b831-64aff1401ca5",
+            "cf29c301-96a5-5559-9762-9c70e91eab66",
+            "5780adfe-60d8-5210-a141-c6e158721789",
+            "a7ec91d8-855b-50ae-b553-bb8dffde7485",
+            "74126b74-1818-5800-8060-125c59bc1027",
+            "7b37ad16-9d7a-56bf-8fbc-ec626896ef32"
+        ]
+    },
+    "8a355455-14f0-45d5-b85b-c8bdb3041fc6": {
+        "map": "사격장",
+        "game_mode": "",
+        "date": "2026-06-05 19:12:25",
+        "game_duration": "00:00:21.883",
+        "blue_score": 0,
+        "red_score": 0,
+        "win": "",
+        "players": [
+            "5780adfe-60d8-5210-a141-c6e158721789"
+        ],
+        "status": "FINISHED"
+    },
+    "0ff212d4-4c08-4a64-89b8-b3773ab4f28b": {
+        "map": "난투 C",
+        "game_mode": "초월 난투 1대1",
+        "date": "2026-06-05 19:21:30",
+        "game_duration": "00:05:48.616",
+        "blue_score": 7,
+        "red_score": 10,
+        "win": "Red",
+        "players": [
+            "bc8f449d-6702-5a11-b2cc-c749a90f6bb6",
+            "5780adfe-60d8-5210-a141-c6e158721789"
+        ],
+        "status": "FINISHED"
+    },
+    "ddf63894-9562-44e8-a3b1-e3b3a6a57cef": {
+        "map": "프랙처",
+        "game_mode": "경쟁전",
+        "date": "2026-06-05 19:59:40",
+        "game_duration": "00:37:06.149",
+        "blue_score": 13,
+        "red_score": 10,
+        "win": "Blue",
+        "players": [
+            "d0aff9cf-1a45-5ba4-9abf-f3101a9a3ec7",
+            "67740a52-c307-569a-835f-cc7c5d5de001",
+            "5780adfe-60d8-5210-a141-c6e158721789",
+            "7003536e-8071-5959-b660-f8c6d8a93d93",
+            "52e35855-6eee-5577-9448-51695fb020b7",
+            "6d80a9fa-4907-5dc1-819f-0efb0ea39913",
+            "a8929326-05c6-52df-8703-7f7576ae7332",
+            "3783936d-4a54-52ae-8cc1-c57db3d12a1a",
+            "4022f890-f05e-530a-a89a-d0966d75f615",
+            "59abcac7-5ab7-5643-b6ed-d0efff5e652a"
+        ],
+        "status": "FINISHED"
+    }
+}

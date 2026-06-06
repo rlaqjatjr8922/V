@@ -1,0 +1,1162 @@
+{
+    "5780adfe-60d8-5210-a141-c6e158721789": {
+        "riot_id": "범지종지#6878",
+        "records": {
+            "0fb0f9ef-b5dd-45cc-b4a4-584b7132a9ef": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "agent": "체임버",
+                "kills": 10,
+                "deaths": 3,
+                "assists": 0,
+                "memo": "",
+                "team": "Blue"
+            },
+            "1d648e36-6bfd-4179-ac84-4e23f5e7fa70": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "체임버",
+                "kills": 10,
+                "deaths": 18,
+                "assists": 6,
+                "memo": "",
+                "team": "Blue"
+            },
+            "d190d375-d544-45df-8fba-a6b306d1d0fe": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "체임버",
+                "kills": 10,
+                "deaths": 3,
+                "assists": 0,
+                "memo": "",
+                "team": "Red"
+            },
+            "03c88063-2c58-4b37-ab56-2272d1c03ada": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "체임버",
+                "kills": 20,
+                "deaths": 14,
+                "assists": 5,
+                "memo": "",
+                "team": "Red"
+            },
+            "3fbe9acf-e831-47ca-a3a8-d150ee67e369": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "체임버",
+                "kills": 18,
+                "deaths": 16,
+                "assists": 2,
+                "memo": "",
+                "team": "Blue"
+            },
+            "86391908-d1c6-438e-95fe-d77e1f7ad4e0": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "체임버",
+                "kills": 20,
+                "deaths": 17,
+                "assists": 6,
+                "memo": "",
+                "team": "Blue"
+            },
+            "e8b8580c-7412-4847-97f0-1f3e8db0d9d1": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "체임버",
+                "kills": 16,
+                "deaths": 16,
+                "assists": 1,
+                "memo": "",
+                "team": "Blue"
+            },
+            "8a355455-14f0-45d5-b85b-c8bdb3041fc6": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "피닉스",
+                "kills": 0,
+                "deaths": 0,
+                "assists": 0,
+                "memo": "",
+                "team": "Red"
+            },
+            "0ff212d4-4c08-4a64-89b8-b3773ab4f28b": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "체임버",
+                "kills": 10,
+                "deaths": 7,
+                "assists": 0,
+                "memo": "",
+                "team": "Red"
+            },
+            "ddf63894-9562-44e8-a3b1-e3b3a6a57cef": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "스카이",
+                "kills": 5,
+                "deaths": 17,
+                "assists": 10,
+                "memo": "",
+                "team": "Red"
+            }
+        }
+    },
+    "cc03dbe1-f374-5655-ab7b-35f3bfcc787a": {
+        "riot_id": "전화하지마라#0523",
+        "records": {
+            "0fb0f9ef-b5dd-45cc-b4a4-584b7132a9ef": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "오멘",
+                "kills": 3,
+                "deaths": 10,
+                "assists": 0,
+                "memo": "",
+                "team": "Red"
+            }
+        }
+    },
+    "c4908da4-76fa-53f6-9169-af439c38216f": {
+        "riot_id": "GEN t3xture#280",
+        "records": {
+            "1d648e36-6bfd-4179-ac84-4e23f5e7fa70": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "사이퍼",
+                "kills": 10,
+                "deaths": 21,
+                "assists": 5,
+                "memo": "",
+                "team": "Blue"
+            }
+        }
+    },
+    "14f81a72-c98c-58da-bfb4-e9988aba7786": {
+        "riot_id": "3대24#KR1",
+        "records": {
+            "1d648e36-6bfd-4179-ac84-4e23f5e7fa70": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "제트",
+                "kills": 17,
+                "deaths": 17,
+                "assists": 0,
+                "memo": "",
+                "team": "Blue"
+            }
+        }
+    },
+    "3986e3ad-b6aa-59de-8e21-c74c98d25bfa": {
+        "riot_id": "Yakuza#0119",
+        "records": {
+            "1d648e36-6bfd-4179-ac84-4e23f5e7fa70": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "피닉스",
+                "kills": 15,
+                "deaths": 17,
+                "assists": 6,
+                "memo": "",
+                "team": "Blue"
+            }
+        }
+    },
+    "2cfa2ae0-69b9-5086-a860-f8c47dd0a024": {
+        "riot_id": "스나충입니다#저격수",
+        "records": {
+            "1d648e36-6bfd-4179-ac84-4e23f5e7fa70": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "소바",
+                "kills": 12,
+                "deaths": 14,
+                "assists": 8,
+                "memo": "",
+                "team": "Red"
+            }
+        }
+    },
+    "3c0f0707-4a33-5765-a42d-7f199a390edc": {
+        "riot_id": "샷건충입니다#펑펑펑",
+        "records": {
+            "1d648e36-6bfd-4179-ac84-4e23f5e7fa70": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "레이나",
+                "kills": 16,
+                "deaths": 11,
+                "assists": 5,
+                "memo": "",
+                "team": "Red"
+            }
+        }
+    },
+    "53c4200b-6cca-5511-98e1-fd23fd2ab2d3": {
+        "riot_id": "악마의 재능#오른손",
+        "records": {
+            "1d648e36-6bfd-4179-ac84-4e23f5e7fa70": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "믹스",
+                "kills": 18,
+                "deaths": 17,
+                "assists": 4,
+                "memo": "",
+                "team": "Blue"
+            }
+        }
+    },
+    "bc845574-977f-5e63-b7f4-21fbd70680b7": {
+        "riot_id": "qhrtnddk#2003",
+        "records": {
+            "1d648e36-6bfd-4179-ac84-4e23f5e7fa70": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "제트",
+                "kills": 19,
+                "deaths": 16,
+                "assists": 1,
+                "memo": "",
+                "team": "Red"
+            }
+        }
+    },
+    "6a42487e-47e2-5ff8-b1fb-40e2b3447b70": {
+        "riot_id": "09중국대장박준연#0000",
+        "records": {
+            "1d648e36-6bfd-4179-ac84-4e23f5e7fa70": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "비토",
+                "kills": 29,
+                "deaths": 12,
+                "assists": 2,
+                "memo": "",
+                "team": "Red"
+            }
+        }
+    },
+    "001322d1-05cd-5625-abb1-150a1c2240d2": {
+        "riot_id": "DRX Flashback#IGL",
+        "records": {
+            "1d648e36-6bfd-4179-ac84-4e23f5e7fa70": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "클로브",
+                "kills": 14,
+                "deaths": 18,
+                "assists": 5,
+                "memo": "",
+                "team": "Red"
+            }
+        }
+    },
+    "e336899b-9690-54df-a4dd-54d0ace36ca1": {
+        "riot_id": "HYUNWOO13#1223",
+        "records": {
+            "d190d375-d544-45df-8fba-a6b306d1d0fe": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "요루",
+                "kills": 3,
+                "deaths": 10,
+                "assists": 0,
+                "memo": "",
+                "team": "Blue"
+            }
+        }
+    },
+    "f00c1125-e19f-5b56-b5e6-a0b0569f9238": {
+        "riot_id": "바다로간 오리#KR1",
+        "records": {
+            "03c88063-2c58-4b37-ab56-2272d1c03ada": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "체임버",
+                "kills": 13,
+                "deaths": 16,
+                "assists": 2,
+                "memo": "",
+                "team": "Blue"
+            }
+        }
+    },
+    "1ba8ada1-c5d3-52d8-bcb7-466a4f2a095f": {
+        "riot_id": "칼로픽#2501",
+        "records": {
+            "03c88063-2c58-4b37-ab56-2272d1c03ada": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "제트",
+                "kills": 12,
+                "deaths": 19,
+                "assists": 6,
+                "memo": "",
+                "team": "Blue"
+            }
+        }
+    },
+    "3afffb55-9510-592b-8da9-bce004c16a32": {
+        "riot_id": "MC성원#성원시티",
+        "records": {
+            "03c88063-2c58-4b37-ab56-2272d1c03ada": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "오멘",
+                "kills": 19,
+                "deaths": 14,
+                "assists": 4,
+                "memo": "",
+                "team": "Red"
+            }
+        }
+    },
+    "02d28a5d-38ab-583a-8c0a-8fe738bd28e0": {
+        "riot_id": "Harry513513#12345",
+        "records": {
+            "03c88063-2c58-4b37-ab56-2272d1c03ada": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "웨이레이",
+                "kills": 12,
+                "deaths": 16,
+                "assists": 6,
+                "memo": "",
+                "team": "Red"
+            }
+        }
+    },
+    "51742a5b-7ba1-5f0a-941f-55c860a3eae5": {
+        "riot_id": "라만차랜드실장돈키호테#중년주제에",
+        "records": {
+            "03c88063-2c58-4b37-ab56-2272d1c03ada": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "케이/오",
+                "kills": 22,
+                "deaths": 16,
+                "assists": 7,
+                "memo": "",
+                "team": "Blue"
+            }
+        }
+    },
+    "237f8119-b1f8-5f8c-b9f6-171ed3f92c44": {
+        "riot_id": "정리제 혈액팩 도둑#혈액팩야르",
+        "records": {
+            "03c88063-2c58-4b37-ab56-2272d1c03ada": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "오멘",
+                "kills": 15,
+                "deaths": 16,
+                "assists": 5,
+                "memo": "",
+                "team": "Blue"
+            }
+        }
+    },
+    "d1477a66-16bf-52ae-aac1-5d8b2084068d": {
+        "riot_id": "잠깐화장실좀#0223",
+        "records": {
+            "03c88063-2c58-4b37-ab56-2272d1c03ada": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "피닉스",
+                "kills": 11,
+                "deaths": 17,
+                "assists": 5,
+                "memo": "",
+                "team": "Blue"
+            }
+        }
+    },
+    "5ce7b9b7-9bec-594e-8b00-466bfdd07003": {
+        "riot_id": "psychopomp#1325",
+        "records": {
+            "03c88063-2c58-4b37-ab56-2272d1c03ada": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "소바",
+                "kills": 14,
+                "deaths": 15,
+                "assists": 4,
+                "memo": "",
+                "team": "Red"
+            }
+        }
+    },
+    "c59e715c-5c1b-52bc-ac97-14a7f75de401": {
+        "riot_id": "Hide on bush#고양이",
+        "records": {
+            "03c88063-2c58-4b37-ab56-2272d1c03ada": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "피닉스",
+                "kills": 19,
+                "deaths": 14,
+                "assists": 7,
+                "memo": "",
+                "team": "Red"
+            }
+        }
+    },
+    "13c5fdb2-ab86-507e-9eab-446727ce4047": {
+        "riot_id": "겨울엔귤이좋다#KR1",
+        "records": {
+            "3fbe9acf-e831-47ca-a3a8-d150ee67e369": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "페이드",
+                "kills": 14,
+                "deaths": 16,
+                "assists": 6,
+                "memo": "",
+                "team": "Blue"
+            }
+        }
+    },
+    "974578a8-3299-5681-9b73-38ecb7363db5": {
+        "riot_id": "Sheriff#원 탭",
+        "records": {
+            "3fbe9acf-e831-47ca-a3a8-d150ee67e369": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "아이소",
+                "kills": 14,
+                "deaths": 19,
+                "assists": 3,
+                "memo": "",
+                "team": "Blue"
+            }
+        }
+    },
+    "747cf4fb-8f70-5e37-b7de-7162dbe5ab8b": {
+        "riot_id": "머라하지마#tqfk",
+        "records": {
+            "3fbe9acf-e831-47ca-a3a8-d150ee67e369": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "제트",
+                "kills": 14,
+                "deaths": 20,
+                "assists": 4,
+                "memo": "",
+                "team": "Blue"
+            }
+        }
+    },
+    "7b4a0473-8b9b-51a3-9deb-55b9d6328a3b": {
+        "riot_id": "NOOOB327#28327",
+        "records": {
+            "3fbe9acf-e831-47ca-a3a8-d150ee67e369": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "레이즈",
+                "kills": 18,
+                "deaths": 17,
+                "assists": 1,
+                "memo": "",
+                "team": "Blue"
+            }
+        }
+    },
+    "7424da4d-3531-51b8-a622-30191a3dc49c": {
+        "riot_id": "R4P1#R4P1",
+        "records": {
+            "3fbe9acf-e831-47ca-a3a8-d150ee67e369": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "제트",
+                "kills": 29,
+                "deaths": 12,
+                "assists": 5,
+                "memo": "",
+                "team": "Red"
+            }
+        }
+    },
+    "8c1af65f-8adf-5130-a7a5-10f069de2199": {
+        "riot_id": "홍 루#汚血泣淚",
+        "records": {
+            "3fbe9acf-e831-47ca-a3a8-d150ee67e369": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "스카이",
+                "kills": 18,
+                "deaths": 14,
+                "assists": 11,
+                "memo": "",
+                "team": "Red"
+            }
+        }
+    },
+    "a54b0bb6-3b72-5a8e-8dda-a50d19911fb9": {
+        "riot_id": "아 거기야#4737",
+        "records": {
+            "3fbe9acf-e831-47ca-a3a8-d150ee67e369": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "피닉스",
+                "kills": 11,
+                "deaths": 19,
+                "assists": 6,
+                "memo": "",
+                "team": "Red"
+            }
+        }
+    },
+    "6180fcb2-1b28-5850-84f8-1d00d733a0c2": {
+        "riot_id": "응애나아기경환#KR1",
+        "records": {
+            "3fbe9acf-e831-47ca-a3a8-d150ee67e369": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "체임버",
+                "kills": 15,
+                "deaths": 17,
+                "assists": 4,
+                "memo": "",
+                "team": "Red"
+            }
+        }
+    },
+    "64bb2b2d-f586-5568-934d-51dad1b9ce11": {
+        "riot_id": "T1 DAN#반말하지마",
+        "records": {
+            "3fbe9acf-e831-47ca-a3a8-d150ee67e369": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "믹스",
+                "kills": 15,
+                "deaths": 16,
+                "assists": 5,
+                "memo": "",
+                "team": "Red"
+            }
+        }
+    },
+    "57663a41-8859-5b45-967f-9b22d1635c56": {
+        "riot_id": "Off My Face#jbjb",
+        "records": {
+            "86391908-d1c6-438e-95fe-d77e1f7ad4e0": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "비토",
+                "kills": 16,
+                "deaths": 20,
+                "assists": 5,
+                "memo": "",
+                "team": "Red"
+            }
+        }
+    },
+    "a59158a3-f999-589c-91db-f591b359df0e": {
+        "riot_id": "강꾸울#7902",
+        "records": {
+            "86391908-d1c6-438e-95fe-d77e1f7ad4e0": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "페이드",
+                "kills": 14,
+                "deaths": 16,
+                "assists": 10,
+                "memo": "",
+                "team": "Blue"
+            }
+        }
+    },
+    "a82a9478-4f97-52de-8d8c-f758db3c9302": {
+        "riot_id": "아낌없이 주는 나무#123",
+        "records": {
+            "86391908-d1c6-438e-95fe-d77e1f7ad4e0": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "믹스",
+                "kills": 26,
+                "deaths": 16,
+                "assists": 10,
+                "memo": "",
+                "team": "Blue"
+            }
+        }
+    },
+    "cfa292eb-fea2-56ca-ba61-50f124702c68": {
+        "riot_id": "아 타 칸#녹서스",
+        "records": {
+            "86391908-d1c6-438e-95fe-d77e1f7ad4e0": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "피닉스",
+                "kills": 26,
+                "deaths": 15,
+                "assists": 5,
+                "memo": "",
+                "team": "Blue"
+            }
+        }
+    },
+    "8f2a9d01-9177-53b1-b600-a955715dd604": {
+        "riot_id": "불고기버거#에에에",
+        "records": {
+            "86391908-d1c6-438e-95fe-d77e1f7ad4e0": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "클로브",
+                "kills": 35,
+                "deaths": 18,
+                "assists": 5,
+                "memo": "",
+                "team": "Red"
+            }
+        }
+    },
+    "242b26c4-b442-509a-a1dd-47168a32da9d": {
+        "riot_id": "上弦 壱 코쿠시보#鬼になる",
+        "records": {
+            "86391908-d1c6-438e-95fe-d77e1f7ad4e0": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "제트",
+                "kills": 13,
+                "deaths": 21,
+                "assists": 9,
+                "memo": "",
+                "team": "Red"
+            }
+        }
+    },
+    "da780a63-6a23-5d90-95b7-1d73132c9894": {
+        "riot_id": "Astral Kirby#KR1",
+        "records": {
+            "86391908-d1c6-438e-95fe-d77e1f7ad4e0": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "네온",
+                "kills": 11,
+                "deaths": 21,
+                "assists": 11,
+                "memo": "",
+                "team": "Blue"
+            }
+        }
+    },
+    "7b97bf8a-354d-55e9-bdbe-4de7595b8c07": {
+        "riot_id": "GEN t3xture#용 비",
+        "records": {
+            "86391908-d1c6-438e-95fe-d77e1f7ad4e0": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "레이나",
+                "kills": 13,
+                "deaths": 17,
+                "assists": 6,
+                "memo": "",
+                "team": "Red"
+            }
+        }
+    },
+    "4da07063-d644-5741-8108-432d98335a67": {
+        "riot_id": "메구덕#5036",
+        "records": {
+            "86391908-d1c6-438e-95fe-d77e1f7ad4e0": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "스카이",
+                "kills": 8,
+                "deaths": 21,
+                "assists": 17,
+                "memo": "",
+                "team": "Red"
+            }
+        }
+    },
+    "dbab0a0c-a323-598b-871c-cc9ffa5e11a2": {
+        "riot_id": "Arcane#6808",
+        "records": {
+            "e8b8580c-7412-4847-97f0-1f3e8db0d9d1": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "제트",
+                "kills": 18,
+                "deaths": 18,
+                "assists": 2,
+                "memo": "",
+                "team": "Blue"
+            }
+        }
+    },
+    "824f3ed5-b5ce-595f-807b-bcbc9b789dc2": {
+        "riot_id": "뽀로로#0207",
+        "records": {
+            "e8b8580c-7412-4847-97f0-1f3e8db0d9d1": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "오멘",
+                "kills": 12,
+                "deaths": 17,
+                "assists": 7,
+                "memo": "",
+                "team": "Blue"
+            }
+        }
+    },
+    "a7ec91d8-855b-50ae-b553-bb8dffde7485": {
+        "riot_id": "재곤이빨래빨아주는 사람#easy",
+        "records": {
+            "e8b8580c-7412-4847-97f0-1f3e8db0d9d1": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "소바",
+                "kills": 11,
+                "deaths": 19,
+                "assists": 1,
+                "memo": "",
+                "team": "Blue"
+            }
+        }
+    },
+    "a4e712b7-0862-58cc-aec2-9bf4b9345aa9": {
+        "riot_id": "세젤귀#00000",
+        "records": {
+            "e8b8580c-7412-4847-97f0-1f3e8db0d9d1": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "레이나",
+                "kills": 28,
+                "deaths": 18,
+                "assists": 5,
+                "memo": "",
+                "team": "Blue"
+            }
+        }
+    },
+    "ef3b563b-84af-5123-9385-89186afc9442": {
+        "riot_id": "Doraemon1#znwn",
+        "records": {
+            "e8b8580c-7412-4847-97f0-1f3e8db0d9d1": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "소바",
+                "kills": 22,
+                "deaths": 14,
+                "assists": 5,
+                "memo": "",
+                "team": "Red"
+            }
+        }
+    },
+    "c6f595ab-640b-58fb-b831-64aff1401ca5": {
+        "riot_id": "주환이우쭈쭈잘한다#캐리주환",
+        "records": {
+            "e8b8580c-7412-4847-97f0-1f3e8db0d9d1": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "사이퍼",
+                "kills": 17,
+                "deaths": 16,
+                "assists": 6,
+                "memo": "",
+                "team": "Red"
+            }
+        }
+    },
+    "cf29c301-96a5-5559-9762-9c70e91eab66": {
+        "riot_id": "wayd#00000",
+        "records": {
+            "e8b8580c-7412-4847-97f0-1f3e8db0d9d1": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "제트",
+                "kills": 24,
+                "deaths": 16,
+                "assists": 2,
+                "memo": "",
+                "team": "Red"
+            }
+        }
+    },
+    "74126b74-1818-5800-8060-125c59bc1027": {
+        "riot_id": "사쿠라#kura3",
+        "records": {
+            "e8b8580c-7412-4847-97f0-1f3e8db0d9d1": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "킬조이",
+                "kills": 16,
+                "deaths": 17,
+                "assists": 3,
+                "memo": "",
+                "team": "Red"
+            }
+        }
+    },
+    "7b37ad16-9d7a-56bf-8fbc-ec626896ef32": {
+        "riot_id": "예 민#jimin",
+        "records": {
+            "e8b8580c-7412-4847-97f0-1f3e8db0d9d1": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "클로브",
+                "kills": 9,
+                "deaths": 22,
+                "assists": 14,
+                "memo": "",
+                "team": "Red"
+            }
+        }
+    },
+    "bc8f449d-6702-5a11-b2cc-c749a90f6bb6": {
+        "riot_id": "klpo09#1032",
+        "records": {
+            "0ff212d4-4c08-4a64-89b8-b3773ab4f28b": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "제트",
+                "kills": 7,
+                "deaths": 10,
+                "assists": 0,
+                "memo": "",
+                "team": "Blue"
+            }
+        }
+    },
+    "d0aff9cf-1a45-5ba4-9abf-f3101a9a3ec7": {
+        "riot_id": "아이언드가자#아이언가자",
+        "records": {
+            "ddf63894-9562-44e8-a3b1-e3b3a6a57cef": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "체임버",
+                "kills": 21,
+                "deaths": 16,
+                "assists": 2,
+                "memo": "",
+                "team": "Blue"
+            }
+        }
+    },
+    "67740a52-c307-569a-835f-cc7c5d5de001": {
+        "riot_id": "선택장애#선택장애",
+        "records": {
+            "ddf63894-9562-44e8-a3b1-e3b3a6a57cef": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "제트",
+                "kills": 19,
+                "deaths": 14,
+                "assists": 2,
+                "memo": "",
+                "team": "Blue"
+            }
+        }
+    },
+    "7003536e-8071-5959-b660-f8c6d8a93d93": {
+        "riot_id": "플레이어2456#KR1",
+        "records": {
+            "ddf63894-9562-44e8-a3b1-e3b3a6a57cef": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "체임버",
+                "kills": 20,
+                "deaths": 17,
+                "assists": 0,
+                "memo": "",
+                "team": "Red"
+            }
+        }
+    },
+    "52e35855-6eee-5577-9448-51695fb020b7": {
+        "riot_id": "kimci01#kimci",
+        "records": {
+            "ddf63894-9562-44e8-a3b1-e3b3a6a57cef": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "제트",
+                "kills": 11,
+                "deaths": 18,
+                "assists": 0,
+                "memo": "",
+                "team": "Red"
+            }
+        }
+    },
+    "6d80a9fa-4907-5dc1-819f-0efb0ea39913": {
+        "riot_id": "고양이상슬랜더가이상형#연락좀",
+        "records": {
+            "ddf63894-9562-44e8-a3b1-e3b3a6a57cef": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "아이소",
+                "kills": 18,
+                "deaths": 16,
+                "assists": 1,
+                "memo": "",
+                "team": "Red"
+            }
+        }
+    },
+    "a8929326-05c6-52df-8703-7f7576ae7332": {
+        "riot_id": "라온힐조#눙눙하하",
+        "records": {
+            "ddf63894-9562-44e8-a3b1-e3b3a6a57cef": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "테호",
+                "kills": 15,
+                "deaths": 14,
+                "assists": 3,
+                "memo": "",
+                "team": "Blue"
+            }
+        }
+    },
+    "3783936d-4a54-52ae-8cc1-c57db3d12a1a": {
+        "riot_id": "1400억짜리팽이사실분구함니다#안토닝",
+        "records": {
+            "ddf63894-9562-44e8-a3b1-e3b3a6a57cef": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "클로브",
+                "kills": 8,
+                "deaths": 19,
+                "assists": 9,
+                "memo": "",
+                "team": "Blue"
+            }
+        }
+    },
+    "4022f890-f05e-530a-a89a-d0966d75f615": {
+        "riot_id": "헤드셋한쪽이없음#KR1",
+        "records": {
+            "ddf63894-9562-44e8-a3b1-e3b3a6a57cef": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "레이나",
+                "kills": 25,
+                "deaths": 15,
+                "assists": 6,
+                "memo": "",
+                "team": "Blue"
+            }
+        }
+    },
+    "59abcac7-5ab7-5643-b6ed-d0efff5e652a": {
+        "riot_id": "3136069del#KR1",
+        "records": {
+            "ddf63894-9562-44e8-a3b1-e3b3a6a57cef": {
+                "throw_count": 0,
+                "block_count": 0,
+                "flame_count": 0,
+                "like_count": 0,
+                "dislike_count": 0,
+                "agent": "클로브",
+                "kills": 24,
+                "deaths": 21,
+                "assists": 4,
+                "memo": "",
+                "team": "Red"
+            }
+        }
+    }
+}

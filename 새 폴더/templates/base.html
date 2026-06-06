@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>VALORANT Memo</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            background:#05080c;
+            color:white;
+            font-family:Arial,sans-serif;
+        }
+
+        .layout{
+            display:grid;
+            grid-template-columns:1fr 360px;
+            gap:14px;
+
+            height:100vh;
+            padding:14px;
+        }
+
+        .main{
+            background:#091017;
+            border:1px solid #1c2a36;
+            border-radius:8px;
+            padding:20px;
+            overflow:auto;
+        }
+
+        .side{
+            display:flex;
+            flex-direction:column;
+            gap:14px;
+        }
+
+        .box{
+            background:#091017;
+            border:1px solid #1c2a36;
+            border-radius:8px;
+            padding:18px;
+        }
+
+        .record-status{
+            color:#22e84f;
+            font-size:24px;
+            font-weight:bold;
+        }
+
+        .menu-title{
+            font-size:24px;
+            font-weight:bold;
+            margin-bottom:15px;
+        }
+
+        .menu-item{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+
+            text-decoration:none;
+            color:white;
+
+            background:#0b1118;
+            border:1px solid #1c2a36;
+            border-radius:8px;
+
+            padding:16px;
+            margin-bottom:10px;
+        }
+
+        .menu-item:hover{
+            background:#111a24;
+        }
+
+        .menu-item.active{
+            background:#08275c;
+            border-color:#1f6fff;
+        }
+
+        .menu-item b{
+            display:block;
+            font-size:18px;
+        }
+
+        .menu-item span{
+            display:block;
+            color:#aaa;
+            font-size:13px;
+            margin-top:4px;
+        }
+
+        .arrow{
+            font-size:22px;
+            color:#aaa;
+        }
+    </style>
+</head>
+<body>
+
+<div class="layout">
+
+    <main class="main">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <aside class="side">
+
+        <div class="box">
+
+            <div class="record-status">
+                ● 녹화중
+            </div>
+
+            <br>
+
+            <div>
+                파일명 : latest.mp4
+            </div>
+
+            <div>
+                상태 : 정상 동작
+            </div>
+
+        </div>
+
+        <div class="box">
+
+            <div class="menu-title">
+                메뉴
+            </div>
+
+            <a class="menu-item {% if active == 'all_info' %}active{% endif %}" href="/all_info">
+                <div>
+                    <b>모든 정보</b>
+                    <span>전체 플레이어 조회</span>
+                </div>
+
+                <div class="arrow">›</div>
+            </a>
+
+            <a class="menu-item {% if active == 'history' %}active{% endif %}" href="/history">
+                <div>
+                    <b>전적 기록</b>
+                    <span>최근 매치 기록</span>
+                </div>
+
+                <div class="arrow">›</div>
+            </a>
+
+            <a class="menu-item {% if active == 'record_file' %}active{% endif %}" href="/record_file">
+                <div>
+                    <b>녹화 파일</b>
+                    <span>녹화 파일 관리</span>
+                </div>
+
+                <div class="arrow">›</div>
+            </a>
+
+        </div>
+
+        <div class="box">
+
+            <div class="menu-title">
+                실시간
+            </div>
+
+            <a class="menu-item {% if active == 'realtime_info' %}active{% endif %}" href="/realtime_info">
+                <div>
+                    <b>정보</b>
+                    <span>현재 10명 누적 통계</span>
+                </div>
+
+                <div class="arrow">›</div>
+            </a>
+
+            <a class="menu-item {% if active == 'realtime_log' %}active{% endif %}" href="/live">
+                <div>
+                    <b>기록</b>
+                    <span>실시간 행동 기록</span>
+                </div>
+
+                <div class="arrow">›</div>
+            </a>
+
+            <a class="menu-item {% if active == 'record_marks' %}active{% endif %}" href="/record_marks">
+                <div>
+                    <b>녹화기록</b>
+                    <span>시간 저장</span>
+                </div>
+
+                <div class="arrow">›</div>
+            </a>
+
+        </div>
+
+    </aside>
+
+</div>
+
+</body>
+</html>

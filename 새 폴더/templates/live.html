@@ -1,0 +1,229 @@
+{% extends "base.html" %}
+{% set active = "realtime_log" %}
+
+{% block content %}
+
+<h1 style="font-size:36px; margin:0 0 10px;">실시간 기록</h1>
+
+<p style="color:#aaa; margin-bottom:10px;">
+    현재 경기 플레이어 기록
+</p>
+
+<p style="color:#00ff66; font-size:18px; font-weight:bold; margin-bottom:20px;">
+    상태 : {{ valorant_state }}
+</p>
+
+<div class="team-wrap">
+
+    <div class="team-box ally-box">
+        <h2 style="margin-top:0; color:#4d8dff;">Blue</h2>
+
+        {% for info in match.players %}
+        {% set puuid = info.subject %}
+        {% if info.team == "Blue" %}
+        {% set riot_id = info.riot_id %}
+        {% set agent = info.agent %}
+        {% set data = players.get(puuid, {}).get("records", {}).get(match_id, {}) %}
+
+        <div class="player-card">
+            <div class="player-name">{{ riot_id }}</div>
+            <div class="champion-name">{{ agent }}</div>
+
+            <button id="throw_{{ puuid }}" class="btn throw-btn {% if data.get('throw_count', 0) == 1 %}on{% endif %}" onclick="toggleFlag('{{ puuid }}','{{ riot_id }}','throw')">던짐</button>
+            <button id="block_{{ puuid }}" class="btn block-btn {% if data.get('block_count', 0) == 1 %}on{% endif %}" onclick="toggleFlag('{{ puuid }}','{{ riot_id }}','block')">차단</button>
+            <button id="flame_{{ puuid }}" class="btn flame-btn {% if data.get('flame_count', 0) == 1 %}on{% endif %}" onclick="toggleFlag('{{ puuid }}','{{ riot_id }}','flame')">욕설</button>
+            <button id="like_{{ puuid }}" class="btn like-btn {% if data.get('like_count', 0) == 1 %}on{% endif %}" onclick="toggleFlag('{{ puuid }}','{{ riot_id }}','like')">좋아요</button>
+            <button id="dislike_{{ puuid }}" class="btn dislike-btn {% if data.get('dislike_count', 0) == 1 %}on{% endif %}" onclick="toggleFlag('{{ puuid }}','{{ riot_id }}','dislike')">싫어요</button>
+
+            <textarea
+                placeholder="메모 입력"
+                onblur="saveMemo('{{ puuid }}','{{ riot_id }}', this.value)"
+                class="memo-box"
+            >{{ data.get("memo","") }}</textarea>
+        </div>
+
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <div class="team-box enemy-box">
+        <h2 style="margin-top:0; color:#ff5f5f;">Red</h2>
+
+        {% for info in match.players %}
+        {% set puuid = info.subject %}
+        {% if info.team == "Red" %}
+        {% set riot_id = info.riot_id %}
+        {% set agent = info.agent %}
+        {% set data = players.get(puuid, {}).get("records", {}).get(match_id, {}) %}
+
+        <div class="player-card">
+            <div class="player-name">{{ riot_id }}</div>
+            <div class="champion-name">{{ agent }}</div>
+
+            <button id="throw_{{ puuid }}" class="btn throw-btn {% if data.get('throw_count', 0) == 1 %}on{% endif %}" onclick="toggleFlag('{{ puuid }}','{{ riot_id }}','throw')">던짐</button>
+            <button id="block_{{ puuid }}" class="btn block-btn {% if data.get('block_count', 0) == 1 %}on{% endif %}" onclick="toggleFlag('{{ puuid }}','{{ riot_id }}','block')">차단</button>
+            <button id="flame_{{ puuid }}" class="btn flame-btn {% if data.get('flame_count', 0) == 1 %}on{% endif %}" onclick="toggleFlag('{{ puuid }}','{{ riot_id }}','flame')">욕설</button>
+            <button id="like_{{ puuid }}" class="btn like-btn {% if data.get('like_count', 0) == 1 %}on{% endif %}" onclick="toggleFlag('{{ puuid }}','{{ riot_id }}','like')">좋아요</button>
+            <button id="dislike_{{ puuid }}" class="btn dislike-btn {% if data.get('dislike_count', 0) == 1 %}on{% endif %}" onclick="toggleFlag('{{ puuid }}','{{ riot_id }}','dislike')">싫어요</button>
+
+            <textarea
+                placeholder="메모 입력"
+                onblur="saveMemo('{{ puuid }}','{{ riot_id }}', this.value)"
+                class="memo-box"
+            >{{ data.get("memo","") }}</textarea>
+        </div>
+
+        {% endif %}
+        {% endfor %}
+    </div>
+
+</div>
+
+<style>
+.team-wrap{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+}
+
+.team-box {
+    background: #081018;
+    border-radius: 8px;
+    padding: 15px;
+    min-width: 0;
+}
+
+.ally-box {
+    border: 1px solid #1f6fff;
+}
+
+.enemy-box {
+    border: 1px solid #ff4242;
+}
+
+.player-card {
+    background: #0b1118;
+    border: 1px solid #1c2a36;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.player-name {
+    font-size: 18px;
+    font-weight: bold;
+    word-break: break-all;
+}
+
+.champion-name {
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+.btn {
+    margin: 2px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    border: none;
+    opacity: 0.35;
+}
+
+.btn.on {
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(255,255,255,0.35);
+}
+
+.throw-btn {
+    background: #ff4242;
+}
+
+.block-btn {
+    background: #ffaa00;
+}
+
+.flame-btn {
+    background: #3377ff;
+}
+
+.like-btn {
+    background: #19a857;
+}
+
+.dislike-btn {
+    background: #7b3cff;
+}
+
+.memo-box {
+    width: 100%;
+    height: 60px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    background: #05080c;
+    color: white;
+    border: 1px solid #1c2a36;
+    border-radius: 6px;
+    padding: 8px;
+}
+</style>
+
+<script>
+const MATCH_ID = "{{ match_id }}";
+
+function toggleFlag(puuid, riotId, flagName) {
+    const btn = document.getElementById(
+        flagName + "_" + puuid
+    );
+
+    btn.classList.toggle("on");
+
+    updatePlayer(
+        puuid,
+        riotId
+    );
+}
+
+function isOn(flagName, puuid) {
+    return document
+        .getElementById(flagName + "_" + puuid)
+        .classList
+        .contains("on");
+}
+
+function updatePlayer(puuid, riotId) {
+    const formData = new FormData();
+
+    formData.append("match_id", MATCH_ID);
+    formData.append("subject", puuid);
+    formData.append("riot_id", riotId);
+
+    formData.append("throw_count", isOn("throw", puuid));
+    formData.append("block_count", isOn("block", puuid));
+    formData.append("flame_count", isOn("flame", puuid));
+    formData.append("like_count", isOn("like", puuid));
+    formData.append("dislike_count", isOn("dislike", puuid));
+
+    fetch("/click", {
+        method: "POST",
+        body: formData
+    });
+}
+
+function saveMemo(puuid, riotId, memo) {
+    const formData = new FormData();
+
+    formData.append("subject", puuid);
+    formData.append("riot_id", riotId);
+    formData.append("match_id", MATCH_ID);
+    formData.append("memo", memo);
+
+    fetch("/memo", {
+        method: "POST",
+        body: formData
+    });
+}
+</script>
+
+{% endblock %}

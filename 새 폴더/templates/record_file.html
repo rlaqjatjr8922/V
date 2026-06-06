@@ -1,0 +1,333 @@
+{% extends "base.html" %}
+{% set active = "record_file" %}
+
+{% block content %}
+
+<h1 class="page-title">녹화 파일</h1>
+
+<p class="page-desc">
+    녹화 파일 관리
+</p>
+
+<div class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-label">전체 녹화</div>
+        <div class="stat-value">{{ total_count }}개</div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-label">SHORT</div>
+        <div class="stat-value">{{ short_files|length }}개</div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-label">LONG</div>
+        <div class="stat-value">{{ long_files|length }}개</div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-label">총 용량</div>
+        <div class="stat-value">{{ total_size_gb }}GB</div>
+    </div>
+</div>
+
+{% if errors %}
+<div class="error-box">
+    <h2>오류</h2>
+
+    {% for error in errors %}
+    <div class="error-item">{{ error }}</div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<div class="record-box">
+    <h2>현재 녹화 상태</h2>
+
+    <div class="setting-row">
+        <div class="label">연결 상태</div>
+        <div class="value">
+            {% if obs_status.ok %}
+                연결됨
+            {% else %}
+                연결 안됨
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="setting-row">
+        <div class="label">녹화 상태</div>
+        <div class="value">
+            {% if obs_status.active %}
+                녹화중
+            {% else %}
+                대기중
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="setting-row">
+        <div class="label">녹화 시간</div>
+        <div class="value">
+            {{ obs_status.timecode }}
+        </div>
+    </div>
+</div>
+
+<div class="section-head">
+    <div>
+        <h2>SHORT 목록</h2>
+        <p>총 {{ short_total_gb }}GB</p>
+    </div>
+</div>
+
+<div class="file-list">
+    {% for file in short_files %}
+    <div class="file-card">
+        <div>
+            <h3>{{ file.map }}</h3>
+            <p>{{ file.date }}</p>
+            <p>{{ file.game_duration }}</p>
+            <p>{{ file.score }}</p>
+            <p>{{ file.win }}</p>
+            <p>{{ file.size_mb }}MB</p>
+        </div>
+
+        <div class="btn-row">
+            <a class="btn" href="/record_file/edit/{{ file.record_type }}/{{ file.filename }}">
+                편집
+            </a>
+
+            <a class="btn" href="/record_file/play/{{ file.record_type }}/{{ file.filename }}">
+                재생
+            </a>
+
+            <form
+                method="post"
+                action="/record_file/delete"
+                onsubmit="return confirm('정말 삭제할까요? 영상 파일이 삭제됩니다.');"
+            >
+                <input type="hidden" name="match_id" value="{{ file.match_id }}">
+                <input type="hidden" name="record_type" value="{{ file.record_type }}">
+                <input type="hidden" name="filename" value="{{ file.filename }}">
+                <button class="btn danger" type="submit">삭제</button>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="section-head">
+    <div>
+        <h2>LONG 목록</h2>
+        <p>총 {{ long_total_gb }}GB</p>
+    </div>
+</div>
+
+<div class="file-list">
+    {% for file in long_files %}
+    <div class="file-card">
+        <div>
+            <h3>{{ file.map }}</h3>
+            <p>{{ file.date }}</p>
+            <p>{{ file.game_duration }}</p>
+            <p>{{ file.score }}</p>
+            <p>{{ file.win }}</p>
+            <p>{{ file.size_mb }}MB</p>
+            <p>마크 {{ file.mark_count }}개</p>
+        </div>
+
+        <div class="btn-row">
+            <a class="btn" href="/record_file/edit/{{ file.record_type }}/{{ file.filename }}">
+                편집
+            </a>
+
+            <a class="btn" href="/record_file/play/{{ file.record_type }}/{{ file.filename }}">
+                재생
+            </a>
+
+            <form
+                method="post"
+                action="/record_file/delete"
+                onsubmit="return confirm('정말 삭제할까요? 영상과 마크(json) 파일이 삭제됩니다.');"
+            >
+                <input type="hidden" name="match_id" value="{{ file.match_id }}">
+                <input type="hidden" name="record_type" value="{{ file.record_type }}">
+                <input type="hidden" name="filename" value="{{ file.filename }}">
+                <button class="btn danger" type="submit">삭제</button>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<style>
+.page-title {
+    font-size:36px;
+    margin:0 0 10px;
+}
+
+.page-desc {
+    color:#aaa;
+    margin-bottom:24px;
+}
+
+.stats-grid {
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:14px;
+    margin-bottom:18px;
+}
+
+.stat-card,
+.record-box,
+.file-card,
+.error-box {
+    background:#081018;
+    border:1px solid #1c2a36;
+    border-radius:14px;
+}
+
+.stat-card {
+    padding:18px;
+}
+
+.stat-label {
+    color:#8899aa;
+    font-size:14px;
+    margin-bottom:8px;
+}
+
+.stat-value {
+    color:white;
+    font-size:26px;
+    font-weight:bold;
+}
+
+.error-box {
+    padding:18px;
+    margin-bottom:18px;
+    border-color:#6b1c1c;
+}
+
+.error-box h2 {
+    margin:0 0 12px;
+    color:#ff6b6b;
+}
+
+.error-item {
+    color:#ff9b9b;
+    padding:6px 0;
+}
+
+.record-box {
+    padding:18px;
+    margin-bottom:18px;
+}
+
+.record-box h2 {
+    margin:0 0 16px;
+}
+
+.setting-row {
+    display:grid;
+    grid-template-columns:180px 1fr;
+    padding:14px 0;
+    border-top:1px solid #1c2a36;
+}
+
+.setting-row:first-of-type {
+    border-top:none;
+}
+
+.label {
+    color:white;
+    font-weight:bold;
+}
+
+.value {
+    color:#ccc;
+}
+
+.section-head {
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    margin:28px 0 12px;
+}
+
+.section-head h2 {
+    margin:0;
+}
+
+.section-head p {
+    margin:6px 0 0;
+    color:#888;
+}
+
+.file-list {
+    display:grid;
+    gap:12px;
+}
+
+.file-card {
+    padding:16px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.file-card h3 {
+    margin:0 0 8px;
+    color:white;
+}
+
+.file-card p {
+    margin:4px 0;
+    color:#aaa;
+}
+
+.btn-row {
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+}
+
+.btn-row form {
+    margin:0;
+}
+
+.btn {
+    background:#132333;
+    color:white;
+    border:1px solid #2e455a;
+    border-radius:8px;
+    padding:10px 14px;
+    text-decoration:none;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.danger {
+    color:#ff5c5c;
+}
+
+@media (max-width:900px) {
+    .stats-grid {
+        grid-template-columns:repeat(2, 1fr);
+    }
+
+    .file-card {
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .btn-row {
+        justify-content:flex-start;
+    }
+}
+</style>
+
+{% endblock %}

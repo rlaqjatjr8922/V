@@ -1,0 +1,274 @@
+{% extends "base.html" %}
+{% set active = "record_marks" %}
+
+{% block content %}
+
+<h1 style="font-size:36px; margin:0 0 10px;">녹화 기록</h1>
+
+<p style="color:#aaa; margin-bottom:28px;">
+    녹화 시작 후 원하는 순간의 시간을 저장합니다.
+</p>
+
+<div class="record-box">
+    <div class="box-title">
+        <b>최근 저장</b>
+        <span>최대 15개 표시</span>
+    </div>
+
+    <div id="mark-list">
+        {% if marks %}
+            {% for mark in marks[:15] %}
+            <div class="mark-row">
+                <div class="mark-time">{{ mark.time }}</div>
+
+                <button
+                    class="mark-delete"
+                    onclick="deleteMark('{{ mark.index }}')"
+                >
+                    X
+                </button>
+            </div>
+            {% endfor %}
+        {% else %}
+            <p style="color:#aaa; padding:15px;">
+                저장된 시간이 없습니다.
+            </p>
+        {% endif %}
+    </div>
+</div>
+
+<div class="bottom-fixed">
+    <button class="save-time-btn" onclick="saveTime()">
+        ◷ 시간 저장
+    </button>
+
+    <div
+        id="lockBox"
+        class="lock-box"
+        onclick="toggleLockShort(event)"
+        onmousedown="startLongPress(event)"
+        onmouseup="cancelLongPress(event)"
+        onmouseleave="cancelLongPress(event)"
+        ontouchstart="startLongPress(event)"
+        ontouchend="cancelLongPress(event)"
+    >
+        <div class="lock-icon" id="lockIcon">🔒</div>
+        <div>
+            <b id="lockTitle">잠금 상태</b>
+            <p id="lockText">길게 눌러 해제</p>
+        </div>
+    </div>
+</div>
+
+<style>
+.record-box {
+    background:#081018;
+    border:1px solid #1c2a36;
+    border-radius:10px;
+    overflow:hidden;
+    margin-bottom:230px;
+}
+
+.box-title {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px;
+    border-bottom:1px solid #1c2a36;
+    font-size:20px;
+}
+
+.box-title span {
+    color:#ccc;
+    font-size:16px;
+}
+
+.mark-row {
+    display:grid;
+    grid-template-columns:1fr 50px;
+    align-items:center;
+    padding:14px 18px;
+    border-bottom:1px solid #1c2a36;
+}
+
+.mark-time {
+    font-size:26px;
+    font-weight:bold;
+}
+
+.mark-delete {
+    background:#ff4242;
+    color:white;
+    border:0;
+    border-radius:6px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    padding:6px 10px;
+}
+
+.bottom-fixed {
+    position:fixed;
+    left:26px;
+    right:386px;
+    bottom:26px;
+    background:#091017;
+    border:1px solid #1c2a36;
+    border-radius:16px;
+    padding:18px;
+    display:flex;
+    gap:18px;
+    align-items:center;
+    justify-content:center;
+    z-index:999;
+}
+
+.save-time-btn {
+    width:420px;
+    height:90px;
+    background:linear-gradient(180deg, #123a80, #08275c);
+    border:2px solid #4d8dff;
+    color:white;
+    border-radius:18px;
+    font-size:38px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 0 25px rgba(31,111,255,0.35);
+}
+
+.lock-box {
+    width:360px;
+    height:90px;
+    border:1px solid #334455;
+    border-radius:16px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    color:#4d8dff;
+    cursor:pointer;
+    user-select:none;
+}
+
+.lock-box.unlocked {
+    color:#ffaa00;
+    border-color:#ffaa00;
+}
+
+.lock-icon { font-size:34px; }
+.lock-box b { font-size:24px; }
+.lock-box p { margin:4px 0 0; color:#aaa; font-size:16px; }
+</style>
+
+<script>
+const MATCH_ID = "{{ match_id }}";
+
+let locked = localStorage.getItem("record_locked") !== "false";
+let longPressTimer = null;
+let longPressed = false;
+
+function saveTime() {
+    const formData = new FormData();
+    formData.append("match_id", MATCH_ID);
+
+    fetch("/add_record_mark", {
+        method: "POST",
+        body: formData
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.ok) {
+            location.reload();
+        } else {
+            alert(data.error || "저장 실패");
+        }
+    });
+}
+
+function deleteMark(index) {
+    const formData = new FormData();
+    formData.append("match_id", MATCH_ID);
+    formData.append("index", index);
+
+    fetch("/delete_record_mark", {
+        method: "POST",
+        body: formData
+    })
+    .then(res => res.json())
+    .then(() => location.reload());
+}
+
+function updateLockUI() {
+    localStorage.setItem("record_locked", locked ? "true" : "false");
+
+    const box = document.getElementById("lockBox");
+    const icon = document.getElementById("lockIcon");
+    const title = document.getElementById("lockTitle");
+    const text = document.getElementById("lockText");
+
+    if (locked) {
+        box.classList.remove("unlocked");
+        icon.innerText = "🔒";
+        title.innerText = "잠금 상태";
+        text.innerText = "길게 눌러 해제";
+    } else {
+        box.classList.add("unlocked");
+        icon.innerText = "🔓";
+        title.innerText = "잠금 해제";
+        text.innerText = "짧게 눌러 잠금";
+    }
+}
+
+function startLongPress(e) {
+    e.stopPropagation();
+    longPressed = false;
+
+    if (!locked) return;
+
+    longPressTimer = setTimeout(() => {
+        locked = false;
+        longPressed = true;
+        updateLockUI();
+    }, 900);
+}
+
+function cancelLongPress(e) {
+    if (e) e.stopPropagation();
+
+    if (longPressTimer) {
+        clearTimeout(longPressTimer);
+        longPressTimer = null;
+    }
+}
+
+function toggleLockShort(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    if (longPressed) {
+        longPressed = false;
+        return;
+    }
+
+    if (!locked) {
+        locked = true;
+        updateLockUI();
+    }
+}
+
+document.addEventListener("click", function(e) {
+    if (!locked) return;
+
+    if (e.target.closest("#lockBox")) return;
+
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+
+    saveTime();
+}, true);
+
+updateLockUI();
+</script>
+
+{% endblock %}

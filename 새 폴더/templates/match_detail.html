@@ -1,0 +1,237 @@
+{% extends "base.html" %}
+{% set active = "record" %}
+
+{% block content %}
+
+<div class="top-actions">
+    <a href="/record" class="action-btn">← 뒤로가기</a>
+
+    <div class="right-actions">
+        <a href="/play_record/{{ match_id }}" class="action-btn">▶ 재생</a>
+        <a href="/edit_record/{{ match_id }}" class="action-btn">✂ 편집</a>
+        <a href="/delete_match/{{ match_id }}" class="action-btn danger">🗑 삭제</a>
+    </div>
+</div>
+
+<div class="divider"></div>
+
+<h1>매치 상세 정보</h1>
+
+<div class="match-info-box">
+    <div class="info-row">
+        <span>맵</span>
+        <b>{{ match.map }}</b>
+    </div>
+
+    <div class="info-row">
+        <span>게임 모드</span>
+        <b>{{ match.game_mode }}</b>
+    </div>
+
+    <div class="info-row">
+        <span>날짜</span>
+        <b>{{ match.date }}</b>
+    </div>
+
+    <div class="info-row">
+        <span>게임 시간</span>
+        <b>{{ match.game_duration }}</b>
+    </div>
+
+    <div class="score-row">
+        <span class="blue">Blue</span>
+        <b>{{ match.blue_score }} : {{ match.red_score }}</b>
+        <span class="red">Red</span>
+    </div>
+
+    <div class="info-row">
+        <span>승리팀</span>
+        <b class="{% if match.win == 'Blue' %}blue{% elif match.win == 'Red' %}red{% endif %}">
+            {{ match.win }}
+        </b>
+    </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="team-table">
+
+    <div class="team-column">
+        <div class="team-title blue-title">BLUE</div>
+
+        {% for p in blue_players %}
+        <div class="player-card">
+            <b>{{ p.riot_id }}</b>
+            <span>{{ p.agent }}</span>
+            <span>{{ p.kills }} / {{ p.deaths }} / {{ p.assists }}</span>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="team-column">
+        <div class="team-title red-title">RED</div>
+
+        {% for p in red_players %}
+        <div class="player-card">
+            <b>{{ p.riot_id }}</b>
+            <span>{{ p.agent }}</span>
+            <span>{{ p.kills }} / {{ p.deaths }} / {{ p.assists }}</span>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+<style>
+.top-actions{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.right-actions{
+    display:flex;
+    gap:8px;
+}
+
+.action-btn{
+    background:#07111a;
+    border:1px solid #1c2a36;
+    color:#ddd;
+    padding:9px 12px;
+    border-radius:7px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.action-btn:hover{
+    background:#0b1b2a;
+    border-color:#2f6cff;
+    color:white;
+}
+
+.action-btn.danger:hover{
+    background:#2a0b0b;
+    border-color:#ff5555;
+}
+
+.divider{
+    border-top:1px solid #1c2a36;
+    margin:18px 0;
+}
+
+h1{
+    font-size:36px;
+    margin-bottom:18px;
+}
+
+.match-info-box{
+    background:#07111a;
+    border:1px solid #1c2a36;
+    border-radius:8px;
+    padding:16px;
+    max-width:650px;
+}
+
+.info-row{
+    display:flex;
+    justify-content:space-between;
+    padding:10px 0;
+    border-bottom:1px solid #14202b;
+}
+
+.info-row:last-child{
+    border-bottom:none;
+}
+
+.info-row span{
+    color:#aaa;
+}
+
+.info-row b{
+    color:white;
+}
+
+.score-row{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    padding:16px 0;
+    font-size:22px;
+    border-bottom:1px solid #14202b;
+}
+
+.blue{
+    color:#4da3ff;
+}
+
+.red{
+    color:#ff5555;
+}
+
+.team-table{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+}
+
+.team-column{
+    background:#07111a;
+    border:1px solid #1c2a36;
+    border-radius:8px;
+    overflow:hidden;
+}
+
+.team-title{
+    text-align:center;
+    padding:12px;
+    font-size:20px;
+    font-weight:bold;
+    border-bottom:1px solid #1c2a36;
+}
+
+.blue-title{
+    color:#4da3ff;
+}
+
+.red-title{
+    color:#ff5555;
+}
+
+.player-card{
+    padding:14px;
+    border-bottom:1px solid #14202b;
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+
+.player-card:last-child{
+    border-bottom:none;
+}
+
+.player-card b{
+    color:white;
+    font-size:17px;
+}
+
+.player-card span{
+    color:#ccc;
+}
+
+@media (max-width:800px){
+    .top-actions{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+    }
+
+    .team-table{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+
+{% endblock %}
